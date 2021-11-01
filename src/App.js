@@ -3,15 +3,12 @@ import './App.css';
 import AuthProvider from './Contexts/AuthProvider';
 import Home from './Home/Home/Home';
 import Camping from './Pages/Camping/Camping';
-// import MyBookings from './Pages/Home/MyBookings/MyBookings';
 import Login from './Home/Login/Login';
-// import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 import Footer from './Shared/Footer/Footer';
 import Header from './Shared/Header/Header';
-// import Bookings from './Pages/Bookings/Bookings';
 import NotFound from './Shared/NotFound/NotFound';
-// import Delete from './Pages/Delete/Delete';
-
+import PrivateRoute from './Home/PrivateRoute/PrivateRoute';
+import MyBookings from './Pages/MyBookings/MyBookings'
 function App() {
   return (
     <AuthProvider>
@@ -24,16 +21,9 @@ function App() {
           <Route path="/home">
             <Home />
           </Route>
-          {/* <PrivateRoute path="/mybooking/:serviceId">
-            <MyBookings></MyBookings>
+          <PrivateRoute path="/mybooking/:serviceId">
+            <MyBookings />
           </PrivateRoute>
-          <PrivateRoute path="/booking">
-            <Bookings></Bookings>
-          </PrivateRoute>
-          <PrivateRoute path="/delete">
-            <Delete></Delete>
-          </PrivateRoute>
-           */}
           <Route path="/camping">
             <Camping></Camping>
           </Route>
