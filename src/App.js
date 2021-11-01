@@ -2,7 +2,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
 import AuthProvider from './Contexts/AuthProvider';
 import Home from './Home/Home/Home';
-// import Camping from './Pages/Home/Camping/Camping';
+import Camping from './Pages/Camping/Camping';
 // import MyBookings from './Pages/Home/MyBookings/MyBookings';
 // import Login from './Pages/Login/Login';
 // import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
@@ -39,6 +39,9 @@ function App() {
           {/* <Route path="/camping">
             <Camping></Camping>
           </Route> */}
+          <Route path="/camping">
+            <Camping></Camping>
+          </Route>
           <Route path="*">
             <NotFound></NotFound>
           </Route>
