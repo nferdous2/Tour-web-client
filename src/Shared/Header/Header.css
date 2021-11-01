@@ -1,0 +1,16 @@
+.header-container{
+    font-family:cursive;
+    background-color: rgb(219, 232, 240);
+}
+.navs-link{
+    color: rgb(48, 56, 59);
+}
+.links-nav{
+    color: rgb(115, 115, 116);
+    font-weight: 600;
+opacity: .8;
+}
+.links-nav:hover{
+    color: rgb(104, 50, 104);
+    opacity: 1;
+}
