@@ -23,7 +23,7 @@ const Header = () => {
                         {user?.email ?
                             <Nav className="">
                                 <Button onClick={logOut} variant="dark">Logout</Button>
-                                <Nav.Link as={Link} to="/booking"><p className="links-nav">Bookings</p></Nav.Link>
+                                <Nav.Link as={Link} to="/booking"><p className="links-nav">MyBookings</p></Nav.Link>
                                 <Nav.Link as={Link} to="/delete"><p className="links-nav">Delete</p></Nav.Link>
                             </Nav> :
                             <Link to="/login">

@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import './MyBookings.css'
 import useAuth from '../..//hooks/useAuth'
 import { Link } from 'react-router-dom';
-const MyBookings = () => {
+const Booking = () => {
     const [name, setName] = useState("")
     const [email, setEmail] = useState("");
     const [address, setAddress] = useState("");
@@ -78,4 +77,4 @@ const MyBookings = () => {
         </div>
     );
 };
-export default MyBookings;
+export default Booking;

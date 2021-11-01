@@ -7,8 +7,10 @@ import Login from './Home/Login/Login';
 import Footer from './Shared/Footer/Footer';
 import Header from './Shared/Header/Header';
 import NotFound from './Shared/NotFound/NotFound';
+import Add from './Home/Add/Add';
 import PrivateRoute from './Home/PrivateRoute/PrivateRoute';
-import MyBookings from './Pages/MyBookings/MyBookings'
+import Booking from './Home/Booking/Booking';
+
 function App() {
   return (
     <AuthProvider>
@@ -21,9 +23,13 @@ function App() {
           <Route path="/home">
             <Home />
           </Route>
-          <PrivateRoute path="/mybooking/:serviceId">
-            <MyBookings />
+
+          <PrivateRoute path="/booking/:serviceId">
+            <Booking />
           </PrivateRoute>
+          <Route path="/add">
+            <Add />
+          </Route>
           <Route path="/camping">
             <Camping></Camping>
           </Route>
