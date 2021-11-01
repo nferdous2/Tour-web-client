@@ -4,7 +4,7 @@ import AuthProvider from './Contexts/AuthProvider';
 import Home from './Home/Home/Home';
 import Camping from './Pages/Camping/Camping';
 // import MyBookings from './Pages/Home/MyBookings/MyBookings';
-// import Login from './Pages/Login/Login';
+import Login from './Home/Login/Login';
 // import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 import Footer from './Shared/Footer/Footer';
 import Header from './Shared/Header/Header';
@@ -33,14 +33,12 @@ function App() {
           <PrivateRoute path="/delete">
             <Delete></Delete>
           </PrivateRoute>
-          <Route path="/login">
-            <Login></Login>
-          </Route> */}
-          {/* <Route path="/camping">
-            <Camping></Camping>
-          </Route> */}
+           */}
           <Route path="/camping">
             <Camping></Camping>
+          </Route>
+          <Route path="/login">
+            <Login></Login>
           </Route>
           <Route path="*">
             <NotFound></NotFound>
