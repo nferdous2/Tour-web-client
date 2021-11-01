@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "Cycling",
+        "img": "https://images.unsplash.com/photo-1534787238916-9ba6764efd4f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y3ljbGluZ3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80",
+        "description": "No big bus window. No iPhone screen. No maps or walls or guidebooks. Just the wind and the open road. That’s the thinking behind our cycling service.Always there will be some guiders with you.So that you do not lose the road"
+    },
+    {
+        "id": 2,
+        "name": "Walking & Trekking",
+        "img": "https://media.istockphoto.com/photos/group-of-hikers-walks-in-mountains-at-sunset-picture-id1189969126?k=20&m=1189969126&s=612x612&w=0&h=6JPjSS9UORT-DAnIoa0mopA9lwFxX8tX8HQrJdb_i70=",
+        "description": "we provide you with expert trail guides, accommodation and porters (where necessary); you bring your legs and a sense of adventure. We’ve got a range of walking trips designed to stretch the legs without making them feel like they’re about to fall off."
+    },
+    {
+        "id": 3,
+        "name": "Food's",
+        "img": "https://cdn.georgeinstitute.org/sites/default/files/styles/width1920_fallback/public/2020-10/world-food-day-2020.png",
+        "description": "We designed our food services to suit with any budget.We provide the food of different culture of different countries with you"
+    },
+    {
+        "id": 4,
+        "name": "Entertainment Club",
+        "img": "https://1.bp.blogspot.com/-Kr48nyMGq1w/XfYnLTyqXwI/AAAAAAAAA8k/MUU2zKAzypsAvCtKqdIo_UL0rn5qmFd0gCNcBGAsYHQ/s1600/Entertainment.jpg",
+        "description": "Are you guys want to take some Entertainment? Don't worry we have different clubs for you entainertainment.Those clubs are divided based on age.Everybody will need ticket to entry the clubs"
+    },
+    {
+        "id": 5,
+        "name": "Bus Service",
+        "img": "https://d2bgjx2gb489de.cloudfront.net/gbb-blogs/wp-content/uploads/2020/10/14143238/shutterstock_178652078-1-1024x576.jpg",
+        "description": "If you are tired and don't want to walk or If you want to visit the places at Bus, you have to book first.You will get all the facilites in bus."
+    },
+    {
+        "id": 6,
+        "name": "Boat Service",
+        "img": "https://english.mathrubhumi.com/polopoly_fs/1.5383859.1611480341!/image/image.jpg_gen/derivatives/landscape_894_577/image.jpg",
+        "description": "If you want to enjoy the sea, there is no other way to the engine boat.With the help of boats you can enjoy the beauty of the sea from very close. We have special guiders for this."
+    }
+]
