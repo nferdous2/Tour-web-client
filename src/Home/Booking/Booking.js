@@ -6,6 +6,7 @@ const Booking = () => {
     const [email, setEmail] = useState("");
     const [address, setAddress] = useState("");
     const [phoneNumber, setPhoneNumber] = useState("");
+    const [serviceName, setServiceName] = useState("");
     const [date, setDate] = useState("");
     const { user } = useAuth()
     //user name    
@@ -27,13 +28,16 @@ const Booking = () => {
     //date
     const handleDate = (e) => {
         setDate(e.target.value)
+    }//handleService
+    const handleService = (e) => {
+        setServiceName(e.target.value)
     }
     //input
     const handleAdd = () => {
-        console.log({ name, email, address, phoneNumber, date });
-        const data = { name, email, address, phoneNumber, date };
+        console.log({ name, email, address, phoneNumber, serviceName, date });
+        const data = { name, email, address, phoneNumber, serviceName, date };
 
-        fetch("http://localhost:5000/services", {
+        fetch("http://localhost:5000/services/user", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),
@@ -57,6 +61,9 @@ const Booking = () => {
                 </div>
                 <div className="form-outline mb-4 p-2">
                     <input type="text" name="" id="" className="form-control" placeholder="Give Your Address" onChange={handleAddress} />
+                </div>
+                <div className="form-outline mb-4 p-2">
+                    <input type="text" name="" id="" className="form-control" placeholder="Service name" onChange={handleService} />
                 </div>
                 <div className="form-outline mb-4 p-2">
                     <input type="number" name="" id="" className="form-control" placeholder="Give Your PhoneNumber" onChange={handlePhoneNumber} />

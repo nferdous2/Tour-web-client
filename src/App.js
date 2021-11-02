@@ -10,6 +10,7 @@ import NotFound from './Shared/NotFound/NotFound';
 import Add from './Home/Add/Add';
 import PrivateRoute from './Home/PrivateRoute/PrivateRoute';
 import Booking from './Home/Booking/Booking';
+import MyBooking from './Home/MyBooking/MyBooking';
 
 function App() {
   return (
@@ -23,9 +24,11 @@ function App() {
           <Route path="/home">
             <Home />
           </Route>
-
-          <PrivateRoute path="/booking/:serviceId">
+          <PrivateRoute path="/booking">
             <Booking />
+          </PrivateRoute>
+          <PrivateRoute path="/myBooking/_id">
+            <MyBooking />
           </PrivateRoute>
           <Route path="/add">
             <Add />
