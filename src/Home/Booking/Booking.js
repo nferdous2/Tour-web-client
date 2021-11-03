@@ -37,7 +37,7 @@ const Booking = () => {
         console.log({ name, email, address, phoneNumber, serviceName, date });
         const data = { name, email, address, phoneNumber, serviceName, date };
 
-        fetch("http://localhost:5000/services/user", {
+        fetch("https://git.heroku.com/possessed-witch-03161.git/services/user", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),
