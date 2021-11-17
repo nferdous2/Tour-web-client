@@ -5,7 +5,7 @@ import './Services.css';
 const Services = () => {
     const [services, setServices] = useState([])
     useEffect(() => {
-        fetch('https://git.heroku.com/possessed-witch-03161.git/services')
+        fetch('http://localhost:5000/services')
             .then(res => res.json())
             .then(data => setServices(data));
     }, [])

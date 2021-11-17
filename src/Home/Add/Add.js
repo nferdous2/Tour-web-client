@@ -9,7 +9,7 @@ const Add = () => {
     const onSubmit = data => {
         console.log(data);
 
-        axios.post('https://git.heroku.com/possessed-witch-03161.git/services', data)
+        axios.post('http://localhost:5000/services', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('added successfully');

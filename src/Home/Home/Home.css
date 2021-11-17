@@ -1,0 +1,37 @@
+.camp{
+    font-family: cursive;
+}
+.camp-icons{
+    color: rgb(68, 7, 58);
+}
+.icons-div{
+    background-color: #f1edf0;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px rgb(216, 211, 216);
+
+}
+.camp-icons:hover{
+    transform: scale(1.5);
+    transition: transform 2s ease-in-out;
+    color: rgb(238, 159, 185);
+}
+.choose-body{
+    box-sizing: border-box;
+    box-shadow: 0px 0px 20px rgb(104, 87, 104);
+    margin: auto;
+    height: 100px;
+    color: aliceblue;
+    background-color: rgb(39, 7, 41);
+    border-radius: 10px;
+}
+.choose-us{
+    padding: 3rem 5rem;
+}
+.choose-us h3{
+    margin: auto;
+    display: inline-block;
+    padding: 20px 10px;
+    border-radius:  15px 15px;
+    background-color: rgb(17, 59, 57);
+    color: #fff;
+}

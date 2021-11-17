@@ -2,7 +2,6 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
 import AuthProvider from './Contexts/AuthProvider';
 import Home from './Home/Home/Home';
-import Camping from './Pages/Camping/Camping';
 import Login from './Home/Login/Login';
 import Footer from './Shared/Footer/Footer';
 import Header from './Shared/Header/Header';
@@ -11,7 +10,7 @@ import Add from './Home/Add/Add';
 import PrivateRoute from './Home/PrivateRoute/PrivateRoute';
 import Booking from './Home/Booking/Booking';
 import MyBooking from './Home/MyBooking/MyBooking';
-
+import Register from './Home/Register/Register'
 function App() {
   return (
     <AuthProvider>
@@ -24,20 +23,20 @@ function App() {
           <Route path="/home">
             <Home />
           </Route>
-          <PrivateRoute path="/booking">
+          <PrivateRoute path="/booking/:id">
             <Booking />
           </PrivateRoute>
-          <PrivateRoute path="/myBooking/_id">
+          <PrivateRoute path="/myBooking">
             <MyBooking />
           </PrivateRoute>
           <Route path="/add">
             <Add />
           </Route>
-          <Route path="/camping">
-            <Camping></Camping>
-          </Route>
           <Route path="/login">
             <Login></Login>
+          </Route>
+          <Route path="/register">
+            <Register></Register>
           </Route>
           <Route path="*">
             <NotFound></NotFound>

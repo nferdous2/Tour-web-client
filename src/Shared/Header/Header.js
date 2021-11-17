@@ -19,16 +19,16 @@ const Header = () => {
                         <Nav.Link as={HashLink} to="/home#home" ><p className="links-nav">Home</p></Nav.Link>
                         <Nav.Link as={HashLink} to="/home#about"><p className="links-nav">About</p></Nav.Link>
                         <Nav.Link as={HashLink} to="/home#services"><p className="links-nav">Services</p></Nav.Link>
-                        <Nav.Link as={HashLink} to="/home#camping"><p className="links-nav">Camping</p></Nav.Link>
                         {user?.email ?
                             <Nav className="">
-                                <Button onClick={logOut} variant="dark">Logout</Button>
-                                <Nav.Link as={Link} to="/myBooking"><p className="links-nav">MyBookings</p></Nav.Link>
-                                <Nav.Link as={Link} to="/delete"><p className="links-nav">Delete</p></Nav.Link>
+                                <Nav.Link as={Link} to="/myBooking"><p className="links-nav">Manage All Orders</p></Nav.Link>
+                                <Nav.Link as={Link} to="/myBooking"><p className="links-nav">My Orders</p></Nav.Link>
+                                <Nav.Link as={Link} to="/add"><p className="links-nav">Add a Service</p></Nav.Link>
+                                <Nav.Link onClick={logOut} className="links-nav " >Logout</Nav.Link>
+
                             </Nav> :
-                            <Link to="/login">
-                                <Button variant="dark">LogIn</Button>
-                            </Link>
+                            <Nav.Link as={Link} to="/login"><p className="links-nav">Log in</p></Nav.Link>
+
                         }
                         <Navbar.Text>
                             <p className="links-nav">Signed in as: <a href="#login" variant="dark">{user?.displayName}</a></p>

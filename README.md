@@ -1,7 +1,7 @@
 ## Project Name:
 Plan Your Tour
 ## Live website 
-(https://happy-franklin-912182.netlify.app/)
+(https://tour-f355b.web.app/)
 # With this site you will see different options for traveling
 # If you have mind to take break from busy life and looking for perfect place inside your country ,You can look at our site.
 ## About Project

@@ -13,9 +13,6 @@ const Service = ({ service }) => {
             <Link to={`/booking/${_id}`}>
                 <button className="btn-service p-2">Book{name.toLowerCase()}</button>
             </Link>
-            <Link to={`/myBooking/${_id}`}>
-                <button className="btn-service p-2">My Booking</button>
-            </Link>
 
 
         </div>

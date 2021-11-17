@@ -44,6 +44,7 @@ const useFirebase = () => {
             .catch(error => {
                 console.log(error.message)
             })
+
     }
     useEffect(() => {
         const unsubscribed = onAuthStateChanged(auth, user => {

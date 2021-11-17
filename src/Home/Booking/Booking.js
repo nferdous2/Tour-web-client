@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import useAuth from '../..//hooks/useAuth'
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 const Booking = () => {
     const [name, setName] = useState("")
     const [email, setEmail] = useState("");
@@ -8,7 +8,8 @@ const Booking = () => {
     const [phoneNumber, setPhoneNumber] = useState("");
     const [serviceName, setServiceName] = useState("");
     const [date, setDate] = useState("");
-    const { user } = useAuth()
+    const { user } = useAuth();
+    const { id } = useParams()
     //user name    
     const handleName = (e) => {
         setName(e.target.value);
@@ -36,14 +37,17 @@ const Booking = () => {
     const handleAdd = () => {
         console.log({ name, email, address, phoneNumber, serviceName, date });
         const data = { name, email, address, phoneNumber, serviceName, date };
+        const proceed = window.confirm('Are you sure ,you want to delete');
+        if (proceed) {
+            fetch("http://localhost:5000/addBooking", {
 
-        fetch("https://git.heroku.com/possessed-witch-03161.git/services/user", {
-            method: "POST",
-            headers: { "content-type": "application/json" },
-            body: JSON.stringify(data),
-        })
-            .then((res) => res.json())
-            .then((result) => console.log(result));
+                method: "POST",
+                headers: { "content-type": "application/json" },
+                body: JSON.stringify(data),
+            })
+                .then((res) => res.json())
+                .then((result) => console.log(result));
+        }
     };
 
     return (
@@ -60,9 +64,7 @@ const Booking = () => {
                     <input type="email" id="form3Example3" className="form-control text-bold" placeholder="Your Email" onChange={handleEmail} />
                 </div>
                 <div className="form-outline mb-4 p-2">
-                    <input type="text" name="" id="" className="form-control" placeholder="Give Your Address" onChange={handleAddress} />
-                </div>
-                <div className="form-outline mb-4 p-2">
+                    {id.name}
                     <input type="text" name="" id="" className="form-control" placeholder="Service name" onChange={handleService} />
                 </div>
                 <div className="form-outline mb-4 p-2">
@@ -74,11 +76,10 @@ const Booking = () => {
                 </div>
                 <br />
                 <br />
-                <Link to="/home">
-                    <button onClick={handleAdd} className="btn btn-success mt-3">
-                        Add
-                    </button>
-                </Link>
+
+                <button onClick={handleAdd} className="btn btn-success mt-3">
+                    Add
+                </button>
             </form >
 
         </div>
