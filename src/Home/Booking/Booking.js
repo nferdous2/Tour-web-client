@@ -39,7 +39,7 @@ const Booking = () => {
         const data = { name, email, address, phoneNumber, serviceName, date };
         const proceed = window.confirm('Are you sure ,you want to delete');
         if (proceed) {
-            fetch("http://localhost:5000/addBooking", {
+            fetch("https://warm-fortress-25095.herokuapp.com/addBooking", {
 
                 method: "POST",
                 headers: { "content-type": "application/json" },

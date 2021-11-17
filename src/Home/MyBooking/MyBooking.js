@@ -3,7 +3,8 @@ import React, { useEffect, useState } from "react";
 const MyBooking = () => {
     const [service, setservice] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:5000/orders")
+        fetch("https://warm-fortress-25095.herokuapp.com/orders")
+            // fetch("http://localhost:5000/orders")
             .then((res) => res.json())
             .then((result) => setservice(result));
     }, []);
@@ -11,7 +12,7 @@ const MyBooking = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure ,you want to delete');
         if (proceed) {
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://warm-fortress-25095.herokuapp.com/orders/${id}`;
             fetch(url, {
                 mathod: 'DELETE'
             })

@@ -29,7 +29,7 @@ const useFirebase = () => {
             setPassword(e.target.value);
         }
     };
-    const handleOnSubmit = (e) => {
+    const handleOnSubmit = (e, history) => {
         e.preventDefault();
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
@@ -40,7 +40,10 @@ const useFirebase = () => {
                     photo: photoURL
                 };
                 setUser(userInfo)
+                history.replace('/');
+
             })
+
             .catch(error => {
                 console.log(error.message)
             })
