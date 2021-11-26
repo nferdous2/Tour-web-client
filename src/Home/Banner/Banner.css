@@ -4,9 +4,21 @@
     background-position: center;
     background-size: cover;
     height: 80vh;
-    font-family: cursive;
-    opacity: 0.8;
+    z-index: 1;
+    opacity: 0.9;
   
+}
+.banner-container::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #161515;
+    opacity: 0.6;
+    z-index: -1;
+    
 }
 
 .banner-btn{
@@ -14,6 +26,7 @@
     color: aliceblue;
     font-weight: 700;  
     border-radius: 10px;
+    font-family: cursive;
 }
 .banner-btn:hover{
     
@@ -21,6 +34,11 @@
         transition: transform 2s ease-in-out;
 }
 .text{
-    color: rgba(202, 8, 73, 0.849);
-    font-weight: 700;
+    font-family: cursive;
+    color: #dbc9d0;
+    display: block;
+     width: fit-content;
+     font-size: 2rem;
+     position: relative;
+     margin-top: 2%;
 }

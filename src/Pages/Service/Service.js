@@ -11,7 +11,7 @@ const Service = ({ service }) => {
             <h3>{name}</h3>
             <p className="px-3">{description}</p>
             <Link to={`/booking/${_id}`}>
-                <button className="btn-service p-2">Book{name.toLowerCase()}</button>
+                <button className="btn-service p-2">Book {name.toLowerCase()}</button>
             </Link>
 
 

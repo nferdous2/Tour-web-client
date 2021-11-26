@@ -4,7 +4,6 @@ const MyBooking = () => {
     const [service, setservice] = useState([]);
     useEffect(() => {
         fetch("https://warm-fortress-25095.herokuapp.com/orders")
-            // fetch("http://localhost:5000/orders")
             .then((res) => res.json())
             .then((result) => setservice(result));
     }, []);

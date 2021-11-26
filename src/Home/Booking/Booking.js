@@ -37,9 +37,9 @@ const Booking = () => {
     const handleAdd = () => {
         console.log({ name, email, address, phoneNumber, serviceName, date });
         const data = { name, email, address, phoneNumber, serviceName, date };
-        const proceed = window.confirm('Are you sure ,you want to delete');
+        const proceed = window.confirm('Are you sure ,you want to Book');
         if (proceed) {
-            fetch("https://warm-fortress-25095.herokuapp.com/addBooking", {
+            fetch("https://warm-fortress-25095.herokuapp.com/orders", {
 
                 method: "POST",
                 headers: { "content-type": "application/json" },
