@@ -15,7 +15,7 @@
     top: 0;
     height: 100%;
     width: 100%;
-    background-color: #161515;
+    background-color: #000000;
     opacity: 0.6;
     z-index: -1;
     
@@ -35,7 +35,7 @@
 }
 .text{
     font-family: cursive;
-    color: #dbc9d0;
+    color: #f8e6ed;
     display: block;
      width: fit-content;
      font-size: 2rem;
