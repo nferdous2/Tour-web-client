@@ -6,6 +6,7 @@ import './Home.css'
 import { faCampground, faGifts, faHome, faMoneyBill, faQuestionCircle, faShuttleVan } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGuilded } from '@fortawesome/free-brands-svg-icons';
+import { Card, CardGroup } from 'react-bootstrap';
 const Home = () => {
     return (
         <div>
@@ -15,7 +16,7 @@ const Home = () => {
             <div>
                 <div className="text-center col-mb-6 camp" id="camping">
                     <div className="m-5">
-                        <h1 className="fs-1">Welcome to Wonderer Camping Ground</h1>
+                        <h1 className="fs-1"><span className="title">W</span>elcome <span className="title">T</span>o <span className="title">W</span>onderer <span className="title">C</span>amping <span className="title">G</span>round</h1>
                         <p className="m-5 fs-4">
                             We are here to make your tour most comfortable,and want to make you tour more beautiful,and we will try our best to satisfie you with our service.
                         </p>
@@ -42,38 +43,29 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <div className="card-group m-5 camp">
-                    <div className="card">
-                        <img
-                            src="https://koa.com/content/images/ways-to-stay/tent/03-benefits-tent-camping.jpg"
-                            className="card-img-top"
-
-                            alt="..."
+                <CardGroup xs={1} md={3} >
+                    <Card className='p-3 cardsAdd'>
+                        <Card.Img style={{ height: '12rem' }} variant="top" src="https://koa.com/content/images/ways-to-stay/tent/03-benefits-tent-camping.jpg"
                         />
-                        <div className="card-body">
-                            <h5 className="card-title">OUR TOP TENT CAMPING TIPS.</h5>
-                            <p className="card-text">
+                        <Card.Body>
+                            <Card.Title>OUR TOP TENT CAMPING TIPS.</Card.Title>
+                            <Card.Text>
                                 Tent camping is an escape from the busyness of our lives that takes
                                 us on adventures in the beautiful outdoors where we can disconnect
                                 from technology and reconnect with Mother Nature.However, in order
                                 to make your camping trip comfortable, and thus, enjoyable, you need
                                 to know what you’re doing and have the right gear. Otherwise, your
                                 vision of the perfect camping trip may, in reality, be a nightmare
-                            </p>
-                            <p className="card-text">
-                                <small className="text-muted">Last updated 3 mins ago</small>
-                            </p>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <img
-                            src="https://www.roamingtimes.com/wp-content/uploads/2020/01/2020-Travel-Trailers.jpg"
-                            className="card-img-top"
-                            alt="..."
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                    <Card className='p-3 cardsAdd'>
+                        <Card.Img style={{ height: '12rem' }} variant="top" src="https://www.roamingtimes.com/wp-content/uploads/2020/01/2020-Travel-Trailers.jpg"
                         />
-                        <div className="card-body">
-                            <h5 className="card-title">Trailers and RV spots</h5>
-                            <p className="card-text">
+                        <Card.Body>
+                            <Card.Title>
+                                Trailers and RV spots</Card.Title>
+                            <Card.Text>
                                 ou’ve purchased or rented an RV and have chosen a route, but now
                                 what? You’ll need to plan ahead for where you’ll park your RV during
                                 your travels. If you’ve never gone RVing before, this can feel a
@@ -81,36 +73,26 @@ const Home = () => {
                                 location]”, but do you want to know how a full-time RVer finds the
                                 BEST spots? How about FREE spots?Well, you’re in the right place.
                                 Based on our personal travels, I have put together the ultimate
-                            </p>
-                            <p className="card-text">
-                                <small className="text-muted">Last updated 3 mins ago</small>
-                            </p>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <img
-                            src="https://media-cldnry.s-nbcnews.com/image/upload/newscms/2021_14/3462489/210406-camping-tent-bd-2x1.jpg"
-                            className="card-img-top"
-                            alt="..."
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                    <Card className='p-3 cardsAdd'>
+                        <Card.Img style={{ height: '12rem' }} variant="top" src="https://media-cldnry.s-nbcnews.com/image/upload/newscms/2021_14/3462489/210406-camping-tent-bd-2x1.jpg"
                         />
-                        <div className="card-body">
-                            <h5 className="card-title">Cabins and glamping</h5>
-                            <p className="card-text">
-                                It’s that time of year, post Christmas and New Year’s, when you
-                                might just be craving a romantic getaway with your significant
-                                other. Maybe you want something a little out of the ordinary for
-                                this time of year. Somewhere that’s not just a nice hotel where it
-                                feels generic and overdone. We have some great options for some
-                                super romantic, super natural, super beautiful glamping locations
-                                for that perfect romantic escape.
-                            </p>
-                            <p className="card-text">
-                                <small className="text-muted">Last updated 3 mins ago</small>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
+                        <Card.Body>
+                            <Card.Title>Trailers and RV spots</Card.Title>
+                            <Card.Text>
+                                ou’ve purchased or rented an RV and have chosen a route, but now
+                                what? You’ll need to plan ahead for where you’ll park your RV during
+                                your travels. If you’ve never gone RVing before, this can feel a
+                                little overwhelming. Sure, you can Google “RV parks in [add
+                                location]”, but do you want to know how a full-time RVer finds the
+                                BEST spots? How about FREE spots?Well, you’re in the right place.
+                                Based on our personal travels, I have put together the ultimate
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                </CardGroup>
             </div>
             );
             {/* service section */}

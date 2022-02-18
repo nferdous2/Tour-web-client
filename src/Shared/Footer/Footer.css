@@ -1,8 +1,7 @@
 .footer{
     font-family:cursive;
 
-    background-color: rgb(223, 234, 241);
-    /* color: black; */
+    background-color: rgba(226, 245, 255, 0.945);
 }
 
 .footer-list{
@@ -13,21 +12,15 @@
     opacity: .8;
 
 }
-.footer-list:hover{
-   color: rgb(252, 255, 251);
-   font-weight: 700;
-   opacity: 1;
-}
+
 .icons{
     justify-content: center;
     margin: 5px;
     padding: 5px;
-    background-color: aliceblue;
     border-radius: 5px;
-    color: rgb(117, 11, 94);
+    color: rgb(6, 25, 37);
     font-size: 30px;
 }
 .icons:hover{
-    background-color: white;
     color:rgb(240, 149, 179)
 }

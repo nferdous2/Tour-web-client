@@ -1,23 +1,41 @@
-.service{
-    background-color: rgb(249, 255, 255);
+
+.service-style{
+    font-weight: 600;
+    padding: 25px;
+    margin: 5px;
+    margin-bottom: 0;
+    height: 95%; 
     box-sizing: border-box;
-    box-shadow: 0px 0px 10px rgb(219, 213, 213);
+    box-shadow: 0px 0px 10px rgba(148, 114, 182, 0.582);
     border-radius:10px ;
-    text-align: center;
     font-family: cursive;
 }
+.title{
+    color: rgb(96, 128, 199);
+}
+.service{
+    overflow: hidden;
+height: 100%;
+}
 .btn-service{
-    background-color: rgb(9, 49, 102);
-    color: aliceblue;
-    font-family: cursive; 
+    background-color: rgba(44, 85, 139, 0.938);
+    color: rgb(250, 241, 246);
+    border: none;
+    border-radius: 8px 5px;
+    box-shadow: 5px 6px rgba(139, 110, 156, 0.596);
+    
     
 }
-
-.service img{
-    width: 100%;
-    height: 50%;
+.infos{
+    text-align: center;
+    color: rgba(122, 72, 102, 0.877);
+    font-weight: 900;
 }
-.service:hover{
-    font-weight: 600;
-    color:rgb(145, 21, 145)
+/* myorders styless */
+.allservices{
+    background-color: rgba(27, 46, 75, 0.938);
+    color: rgb(250, 241, 246);
+    border: none;
+    border-radius: 8px 5px;
+    box-shadow: 5px 6px rgba(139, 110, 156, 0.596);
 }

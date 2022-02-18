@@ -10,7 +10,6 @@ import Add from './Home/Add/Add';
 import PrivateRoute from './Home/PrivateRoute/PrivateRoute';
 import Booking from './Home/Booking/Booking';
 import MyBooking from './Home/MyBooking/MyBooking';
-import Register from './Home/Register/Register'
 function App() {
   return (
     <AuthProvider>
@@ -35,9 +34,7 @@ function App() {
           <Route path="/login">
             <Login></Login>
           </Route>
-          <Route path="/register">
-            <Register></Register>
-          </Route>
+
           <Route path="*">
             <NotFound></NotFound>
           </Route>

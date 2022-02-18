@@ -9,7 +9,7 @@ const Header = () => {
 
     return (
         <>
-            <Navbar sticky="top" collapseOnSelect expand="lg" className="header-container m-2" >
+            <Navbar sticky="top" collapseOnSelect expand="lg" className="header-container p-2" >
                 <Container>
                     <Navbar.Brand href="#home" className="justify-content-start">
                         <p className="navs-link">Plan Your Tour</p>

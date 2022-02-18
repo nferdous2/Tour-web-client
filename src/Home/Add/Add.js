@@ -20,13 +20,16 @@ const Add = () => {
     }
 
     return (
-        <div className="add">
-            <h2 className="text-center">Please Book</h2>
-            <form className="form-container" onSubmit={handleSubmit(onSubmit)}>
-                <input className="form-outline mt-3 mb-4 p-2" {...register("name", { required: true, maxLength: 20 })} placeholder="Name" />
-                <textarea className="form-outline mb-4 p-2"{...register("description")} placeholder="Description" />
-                <input {...register("img")} placeholder="image url" />
-                <input className="submit-btn mt-3" type="submit" />
+        <div className='p-3 mt-2 d-flex justify-content-center '>
+            <form onSubmit={handleSubmit(onSubmit)} className="adds p-3">
+                <h2>Add <span className='title'>A</span> Service</h2>
+                <h5><span className='title'>Service</span> Image</h5>
+                <input {...register("img")} placeholder="Service Img Url" required />
+                <h5>Service <span className='title'>Name</span></h5>
+                <input {...register("name", { required: true, maxLength: 20 })} placeholder='Service name' required />
+                <h5><span className='title'>Service</span> Description</h5>
+                <input {...register("description")} placeholder="Description" required />
+                <input type="submit" value='Add Service' className='m-3' />
             </form>
         </div>
     );

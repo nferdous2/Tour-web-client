@@ -1,88 +1,49 @@
-import React, { useState } from 'react';
-import useAuth from '../..//hooks/useAuth'
-import { Link, useParams } from 'react-router-dom';
-const Booking = () => {
-    const [name, setName] = useState("")
-    const [email, setEmail] = useState("");
-    const [address, setAddress] = useState("");
-    const [phoneNumber, setPhoneNumber] = useState("");
-    const [serviceName, setServiceName] = useState("");
-    const [date, setDate] = useState("");
-    const { user } = useAuth();
-    const { id } = useParams()
-    //user name    
-    const handleName = (e) => {
-        setName(e.target.value);
-    };
-    //user email
-    const handleEmail = (e) => {
-        setEmail(e.target.value);
-    };
-    //address
-    const handleAddress = (e) => {
-        setAddress(e.target.value);
-    };
-    //phoneNumber
-    const handlePhoneNumber = (e) => {
-        setPhoneNumber(e.target.value);
-    };
-    //date
-    const handleDate = (e) => {
-        setDate(e.target.value)
-    }//handleService
-    const handleService = (e) => {
-        setServiceName(e.target.value)
-    }
-    //input
-    const handleAdd = () => {
-        console.log({ name, email, address, phoneNumber, serviceName, date });
-        const data = { name, email, address, phoneNumber, serviceName, date };
-        const proceed = window.confirm('Are you sure ,you want to Book');
-        if (proceed) {
-            fetch("https://warm-fortress-25095.herokuapp.com/orders", {
 
-                method: "POST",
-                headers: { "content-type": "application/json" },
-                body: JSON.stringify(data),
+import axios from 'axios';
+import React from 'react';
+import { useForm } from 'react-hook-form';
+import { useParams } from 'react-router-dom';
+import useAuth from '../..//hooks/useAuth';
+const Booking = () => {
+    const { register, handleSubmit, reset } = useForm();
+    const { id } = useParams();
+    const { user } = useAuth();
+
+
+    const onSubmit = data => {
+        console.log(data);
+
+        axios.post('https://warm-fortress-25095.herokuapp.com/orders', data)
+            .then(res => {
+                if (res.data.insertedId) {
+                    alert('Order place successfully');
+                    reset();
+                }
+
             })
-                .then((res) => res.json())
-                .then((result) => console.log(result));
-        }
-    };
+    }
 
     return (
-        <div >
-            <form className=" form-container mt-5">
-                <h2 className="text-center">My Booking</h2>
-                {/* <!-- Email input --> */}
-                <div className="form-outline mb-4 p-2">
-                    {user.displayName}
-                    <input type="text" name="" id="" className="form-control" placeholder="User Name" onChange={handleName} />
+        <div className="p-3 mt-2 d-flex justify-content-center col-sm-6 col-md-12 ">
+            <form onSubmit={handleSubmit(onSubmit)} className=" adds p-3">
+                <h2>Confirm<span className='title'> Booking</span></h2>
+                <h5><span className='title'>Your</span> Name: {user.displayName}</h5>
+                <h5>Your <span className='title'>Email</span>: {user.email}</h5>
+                <h5><span className='title'>Service</span> ID:{id}</h5>
+                <h5>Service <span className='title'>Name</span></h5>
+                <input {...register("name", { required: true, maxLength: 20 })} placeholder='Service name' required />
+                <h5>Service <span className='title'>Price</span></h5>
+                <input {...register("price")} placeholder="Service Price" required />
+                <h5>Your <span className='title'>Phone</span></h5>
+                <input {...register("number")} placeholder="Your Number" required />
+                <div className="form-outline">
+                    <h6>When will you come</h6>
+                    <input {...register("date")} type="date" placeholder="Date" required />
                 </div>
-                <div className="form-outline mb-4 p-2">
-                    {user.email}
-                    <input type="email" id="form3Example3" className="form-control text-bold" placeholder="Your Email" onChange={handleEmail} />
-                </div>
-                <div className="form-outline mb-4 p-2">
-                    {id.name}
-                    <input type="text" name="" id="" className="form-control" placeholder="Service name" onChange={handleService} />
-                </div>
-                <div className="form-outline mb-4 p-2">
-                    <input type="number" name="" id="" className="form-control" placeholder="Give Your PhoneNumber" onChange={handlePhoneNumber} />
-                </div>
-                <div className="form-outline mb-4 p-2">
-                    <p>when will you come</p>
-                    <input type="date" name="" id="" onChange={handleDate} />
-                </div>
-                <br />
-                <br />
-
-                <button onClick={handleAdd} className="btn btn-success mt-3">
-                    Add
-                </button>
-            </form >
-
+                <input type="submit" value='Add Service' className='m-3' />
+            </form>
         </div>
     );
 };
+
 export default Booking;

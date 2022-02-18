@@ -7,10 +7,10 @@ import './Footer.css'
 const Footer = () => {
     return (
         <div>
-            <div className="footer m-4">
+            <div className="footer mt-3">
                 <div className="left-container">
-                    <div className="row">
-                        <div className="col-md-5">
+                    <div className="row p-3">
+                        <div className="col-md-5 ">
                             <h2>Plan Your Tour</h2>
                             {/* icons use */}
                             <div className="icons-container d-flex ">
