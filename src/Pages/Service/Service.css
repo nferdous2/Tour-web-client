@@ -31,6 +31,9 @@ height: 100%;
     color: rgba(122, 72, 102, 0.877);
     font-weight: 900;
 }
+.btn-div{
+    padding: 4%;
+}
 /* myorders styless */
 .allservices{
     background-color: rgba(27, 46, 75, 0.938);

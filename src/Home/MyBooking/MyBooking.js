@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 const MyBooking = () => {
     const [orders, setOrders] = useState([]);
     useEffect(() => {
-        fetch("https://warm-fortress-25095.herokuapp.com/orders")
+        fetch("https://tour-web-server-site.onrender.com/orders")
             .then((res) => res.json())
             .then((result) => setOrders(result));
     }, []);

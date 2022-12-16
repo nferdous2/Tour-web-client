@@ -13,7 +13,7 @@ const Booking = () => {
     const onSubmit = data => {
         console.log(data);
 
-        axios.post('https://warm-fortress-25095.herokuapp.com/orders', data)
+        axios.post('https://tour-web-server-site.onrender.com/orders', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Order place successfully');
@@ -40,7 +40,7 @@ const Booking = () => {
                     <h6>When will you come</h6>
                     <input {...register("date")} type="date" placeholder="Date" required />
                 </div>
-                <input type="submit" value='Add Service' className='m-3' />
+                <input type="submit" value='Confirm' className='m-3' />
             </form>
         </div>
     );

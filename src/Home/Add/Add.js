@@ -9,7 +9,7 @@ const Add = () => {
     const onSubmit = data => {
         console.log(data);
 
-        axios.post('https://warm-fortress-25095.herokuapp.com/services', data)
+        axios.post('https://tour-web-server-site.onrender.com/services', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('added successfully');
@@ -29,6 +29,8 @@ const Add = () => {
                 <input {...register("name", { required: true, maxLength: 20 })} placeholder='Service name' required />
                 <h5><span className='title'>Service</span> Description</h5>
                 <input {...register("description")} placeholder="Description" required />
+                <h5><span className='title'>P</span>rice</h5>
+                <input {...register("price")} placeholder="Price" required />
                 <input type="submit" value='Add Service' className='m-3' />
             </form>
         </div>

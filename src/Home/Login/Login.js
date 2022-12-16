@@ -1,6 +1,6 @@
 
 import React from 'react';
-import google from '../../images/Google.png'
+import google from '../../images/Google.jpg'
 import loginImg from '../../images/login.jpg'
 import useAuth from '../../hooks/useAuth';
 import './Login.css'

@@ -102,15 +102,15 @@ const Home = () => {
             <div className='choose-us'>
                 <h3>Why Choose Us <FontAwesomeIcon icon={faQuestionCircle}></FontAwesomeIcon></h3>
                 <div className="row pt-5 text-success">
-                    <div className="col-md-3 choose-body">
+                    <div className="col-md-3 m-2 choose-body">
                         <h4>We Provide Guide</h4>
                         <FontAwesomeIcon icon={faGuilded}></FontAwesomeIcon>
                     </div>
-                    <div className="col-md-3  choose-body">
+                    <div className="col-md-3 m-2 choose-body">
                         <h4>Payment After Taking services</h4>
                         <FontAwesomeIcon icon={faMoneyBill}></FontAwesomeIcon>
                     </div>
-                    <div className="col-md-3  choose-body">
+                    <div className="col-md-3 m-2 choose-body">
                         <h4>Often Offer Discount </h4>
                         <FontAwesomeIcon icon={faGifts} ></FontAwesomeIcon>
                     </div>
